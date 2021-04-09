@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+<link rel="stylesheet" href="AgePage.css">
+<script>//links to AgePage CSS</script>
+</head>
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="warning">
+              <ion-title>
+                Age Security Page
+              </ion-title>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content>    
+                <ion-item>
+                    <ion-title>
+                       Select Age
+                      </ion-title>     
+                </ion-item>
+                <ion-card>
+                <ion-item>         
+                       <form action="homePage.html">  
+                    <input type="submit" value="I am 18+" />
+                    <script>//button leading to homePage if user selects "I am 18+"</script>
+                    <ion-item>
+                      <ion-thumbnail>
+                    <img src="go.png">
+                    </ion-thumbnail>
+                    </ion-item>
+                </form>
+            </ion-item>         
+        </ion-card>
+             <ion-card>
+       <ion-item>           
+<ion-button type="button" onclick="alert('You must be 18 or over to access this site')">I am under 18</ion-button>
+<ion-item>
+  <ion-thumbnail>
+<img src="stop.png">
+</ion-thumbnail>
+</ion-item>
+<script>//if selected, button shows alert "You must be 18 or over to access this site"</script>
+</ion-item>
+       </ion-card>
+       <ion-card>
+         <ion-text>
+          <ion-text color="secondary">
+        <ion-item>
+        <ion-thumbnail>
+      <img src="cocktail (4).png">
+    </ion-thumbnail>
+  </ion-item>
+    WELCOME TO THE COCKTAIL FINDER!
+      </ion-text>
+       </ion-card>
+</ion-content>
+</ion-app>
+</body>
+ 
+ 

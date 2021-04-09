@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+<link rel="stylesheet" href="homePage.css">
+<script>//links to homePage CSS</script>
+</head>
+<body>  
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="warning">
+              <ion-title>
+                Home Page
+              </ion-title>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content>
+            <ion-item>              
+                <a href="homePage.html"><ion-button>Home</ion-button></a>
+                    <a href="recipePage.html"><ion-button>Recipe</ion-button></a>
+                    <a href="AgePage.html"><ion-button>Age Security</ion-button></a>
+                <script>//html links to other pages</script>
+                </ion-item>
+                <ion-item>
+                    <ion-title>
+                        cocktail finder
+                      </ion-title>           
+                </ion-item>
+            <ion-list>
+                <ion-item>   
+                <ion-label>Ingredient1</ion-label>
+                        <ion-select id="ingr1Val">
+                            <ion-select-option value="vodka">vodka</ion-select-option>
+                            <ion-select-option value="gin">gin</ion-select-option>
+                            <ion-select-option value="rum">rum</ion-select-option>
+                            <ion-select-option value="orange">orange juice</ion-select-option>
+                            <ion-select-option value="coca-cola">coca cola</ion-select-option>
+                            <ion-select-option value="lemonade">lemonade</ion-select-option>
+                            <ion-select-option value="brandy">brandy</ion-select-option>
+                            <ion-select-option value="tequila">tequila</ion-select-option>
+                            <ion-select-option value="whiskey">whiskey</ion-select-option>
+                            <script>//list of drink options</script>
+                        </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-button onclick="myFunction()">Search</ion-button>
+                    <script>//search button calls API and returns cocktails matching selected drink
+                    //myFunction is a function on app.js which fecthes data from API 'url'</script>
+                </ion-item>
+                <ion-scroll style="height: 200px">
+                    <ion-list  id = "results-container">   
+                   </ion-list>
+                </ion-scroll>
+            </ion-content>
+            <ion-footer>
+                <ion-toolbar color="warning"></ion-toolbar>
+            </ion-footer>
+        </ion-list>
+    </ion-app>
+    <script src="app.js"></script>
+    <script>//links to app.js page</script>
+
+</body>
+</html>

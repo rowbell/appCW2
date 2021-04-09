@@ -1,0 +1,25 @@
+
+ion-card {
+    height: 25%;
+    margin: 15px;
+    float: center;
+    }
+    ion-card {
+        height: 25%;
+        margin: 15px;
+        float: center;
+        font-size: 1.6rem;
+        font-style:normal;
+        font-weight: bold;
+         
+        }
+
+     ion-thumbnail{
+         float: left;
+
+     }
+
+   
+     
+
+       

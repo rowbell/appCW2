@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+</head>
+<script>//FAVOURITES PAGE NOT USED IN FINAL APP</script>
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="primary">
+              <ion-title>
+                Favourites Page
+              </ion-title>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content>
+            <ion-item>
+              <a href="homePage.html"><button>Home</button></a>
+            <a href="recipePage.html"><button>Recipe</button></a>
+            <a href="AgePage.html"><button>Age Security</button></a>
+            <script>//html links to other pages</script>
+                </ion-item>
+                <ion-item>
+                    <ion-title>
+                        Favourites
+                      </ion-title>
+                      <script>
+                        let favourites = JSON.parse(localStorage.getItem("favourites"));
+                        let instructions = JSON.parse(localStorage.getItem("instructions"));
+                        //saves cocktail on favourites page
+                        console.log(favourites)
+                      </script>
+                 </ion-item>
+                </ion-content>
+                <ion-content>
+                <ion-card>
+                  <ion-thumbnail>
+                  <img src="cocktail.png"/>
+                  </ion-thumbnail>
+                  <ion-card-header>
+                    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                    <ion-card-title>Cocktail Name</ion-card-title>
+                    <ion-button id="btn-press">Remove</ion-button>
+                  </ion-card-header>
+                </ion-content>
+                <ion-footer>
+                    <ion-toolbar color="primary"></ion-toolbar>
+    </ion-app>
+<script src="favourites.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+<link rel="stylesheet" href="recipePage.css">
+</head>
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="warning">
+              <ion-title>
+                Recipe Page
+              </ion-title>
+            </ion-toolbar>
+        </ion-header>
+          <ion-content>
+            <ion-item>
+              <a href="homePage.html"><ion-button>Home</ion-button></a>
+                    <a href="recipePage.html"><ion-button>Recipe</ion-button></a>
+                    <a href="AgePage.html"><ion-button>Age Security</ion-button></a>
+          </ion-button>
+            <script>//html links to other pages</script>
+            </ion-item>
+                </ion-content>
+                <ion-card>
+                  <ion-card-header id="instruction-card">                 
+                    <ion-card-title id="title">Cocktail Name</ion-card-title>
+                    <ion-card-subtitle id="subtitle">Card Subtitle</ion-card-subtitle>
+                    <ion-card-subtitle id="subtitle2">Card Subtitle</ion-card-subtitle>
+                    <ion-card-subtitle id="subtitle3">Card Subtitle</ion-card-subtitle>
+                    <ion-card-subtitle id="subtitle4">Card Subtitle</ion-card-subtitle>
+                    <ion-card-subtitle id="subtitle5">Card Subtitle</ion-card-subtitle>
+                    <ion-card-subtitle id="subtitle6">Card Subtitle</ion-card-subtitle>
+                    <ion-card-subtitle id="subtitle7">Card Subtitle</ion-card-subtitle>
+                    <ion-card-subtitle id="subtitle8">Card Subtitle</ion-card-subtitle>
+                    <script>//card areas for drink name, ingredients, and instructions</script>
+                    
+                  </ion-card-header>
+                   <ion-card-content id="content">
+                   </ion-card-content>
+                   <img id="thumb" class="center"></img>
+                   <script>//thumbnail image of selected cocktail</script>
+                 </ion-card>
+                <ion-footer>
+                  <ion-toolbar color="warning"></ion-toolbar>
+                </ion-footer>
+                <script>               
+                  let instructions = JSON.parse(localStorage.getItem("instructions"));
+                  //saves cocktail on recipe page
+
+                  console.log(instructions)
+                  document.getElementById("title").innerHTML = instructions.strDrink;
+                  document.getElementById("content").innerHTML = instructions.strInstructions;
+                  document.getElementById("subtitle").innerHTML = instructions.strIngredient1;
+                  document.getElementById("subtitle2").innerHTML = instructions.strIngredient2;
+                  document.getElementById("subtitle3").innerHTML = instructions.strIngredient3;
+                  document.getElementById("subtitle4").innerHTML = instructions.strIngredient4;
+                  document.getElementById("subtitle5").innerHTML = instructions.strIngredient5;
+                  document.getElementById("subtitle6").innerHTML = instructions.strIngredient6;
+                  document.getElementById("subtitle7").innerHTML = instructions.strIngredient7;
+                  document.getElementById("subtitle8").innerHTML = instructions.strIngredient8;
+                  document.getElementById("thumb").src = instructions.strDrinkThumb;
+                  //document.getElementById("content").innerHTML = instructions;
+                  //fetches drink name, instructions, ingredients, and thumbnail from API
+
+                </script>
+                <script src="favourites.js"></script>
+                  
+</body>
+</html>
